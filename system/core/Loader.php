@@ -357,7 +357,7 @@ class CI_Loader {
 		$this->_ci_models[] = $name;
 		$model = new $model();
 		$CI->$name = $model;
-		log_message('info', 'Model "'.get_class($model).'" initialized');
+		log_message('info', 'Model "'.get_class(ucfirst($model)).'" initialized');
 		return $this;
 	}
 
